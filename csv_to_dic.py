@@ -13,7 +13,6 @@ def createDict():
                         line = lines[i]
                         values = list(map(int, line.split(",")))
                         currDict = statistics
-
                         for y in range(3):
                                 #Set current value
                                 currVal = values[y]
@@ -30,6 +29,7 @@ def createDict():
                                         currDict = currDict[currVal]
                         #Set last k/v pair
                         currDict[values[3]] = values[4]
+        return statistics
 
+print(createDict())
 
-createDict()
